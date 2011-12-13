@@ -11,3 +11,5 @@ optional arguments:
   -k KEY, --key KEY     The private key to use in pem format.
   -p PORT, --port PORT  The port the HTTP proxy listens on (default: 8080).
 
+
+Please file any bugs you find, so I can fix them for you and everyone else.
