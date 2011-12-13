@@ -83,7 +83,10 @@ class ClientCertRequest(Request):
         self.setResponseCode(response.code)
 
     def process(self):
-        response = self.proxyRequest()
+        try:
+            response = self.proxyRequest()
+        except urllib2.HTTPError, e:
+            response = e
         responseText = self.generateResponseText(response)
         self.prepareResponse(response)
         self.write(responseText)
