@@ -1,0 +1,13 @@
+$ ./clientCertHTTPProxy.py -h
+usage: clientCertHTTPProxy.py [-h] -c CERT -k KEY [-p PORT]
+
+HTTP proxy that uses a given client certificate to authenticate all proxied
+requests with the server. Notice, that all requests have to be http, even if
+the target is https. All requests will be rewritten to https.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -c CERT, --cert CERT  The certificate to use in pem format.
+  -k KEY, --key KEY     The private key to use in pem format.
+  -p PORT, --port PORT  The port the HTTP proxy listens on (default: 8080).
+
